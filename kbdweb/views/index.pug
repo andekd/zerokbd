@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  label Select your keyboard layout: 
+    select(name='dropDown', id='kbdfiles')
+      each val in kbdfiles
+        option=val
+  br
+  label Select your keyboard file: &nbsp &nbsp &nbsp
+    select(name='dropDown', id='testfiles')
+      each val in testfiles
+        option=val
